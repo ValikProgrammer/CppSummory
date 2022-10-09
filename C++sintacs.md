@@ -193,7 +193,8 @@ if (s1.find(s2) != std::string::npos) { // or s1.find(s2) < s1.length()
   + ```cpp
     vector<int> v = {0,1,2,3,4};
     vector<int> v_copy(v.begin() , v.end()); // просто скопировать
-    vector<int> v2(v.begin() , v.end()-2); // сделать срез массива 
+    vector<int> v2(v.begin() , v.end()-2); // сделать срез массив
+    vector<int> v2(v.begin()+2 , v.end()+5); // сделать срез массива 
     vector<int> v3(v.begin() +2, v.end()); // сделать срез массива 
     vector<int> v4(v.begin() +3 , v.end()-2); // сделать срез массива 
     ```
@@ -273,7 +274,7 @@ for (auto i : mp) { // get keys and values
 }
 
     return 0;
-}
+
 ```
 
 ## Языковые конструкции (циклы , if ...)
@@ -332,7 +333,7 @@ cin.tie(NULL);
   bool ok = true;
   for(int  i = 0; i < 3; ++i){
     for(int j = 0; j < 3; ++j){
-      ok &= arr[i][j] == arr[2 - i][2 - j]; // ok = ok & ( arr[i][j] == arr[2 - i][2 - j] ) ; тоесть если правое значение не было равно true то ok всегда будут равен false и мы уже никогда не получим положиетльного ответа даже если правая часть будет равна true
+      ok &= arr[i][j] == arr[2 - i][2 - j]; // ok = ok & ( arr[i][j] == arr[2 - i][2 - j] ) ; тоесть если правое значение НЕ БЫЛО равно true то ok всегда будут равен false и мы уже никогда не получим положиетльного ответа даже если правая часть будет равна true
     }
   }
   
@@ -370,7 +371,7 @@ cin.tie(NULL);
       } else {
         sum[turn] += v2;      
       }
-      turn = 1-turn; // 1-0 -> 1 ; 1-1 -> 0 
+      turn = 1-turn; // меняем поочередность 1-0 -> 1 ; 1-1 -> 0 
     }
     cout << sum[0] << " " << sum[1] << "\n";
     ```
