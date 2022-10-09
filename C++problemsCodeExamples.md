@@ -4,7 +4,8 @@
 
 ### Легкие , но нужно догадаться
 
-+ https://codeforces.com/contest/1374/problem/C6666666
++ https://codeforces.com/contest/1374/problem/C
++ https://codeforces.com/problemset/problem/1433/A
 
 
 ### Жадные алгоритмы 
