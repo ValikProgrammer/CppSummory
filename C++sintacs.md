@@ -134,6 +134,10 @@
 string s = to_string(value); // convert int to string
 int value = stoi(s); // convert string to int
 
+str s = "!!!Hello!world!!!";
+int n = count(s.begin(),s.end(),'!'); // can find only chars (not strings)
+cr(n)
+
 /*check if substr in str*/
 if (s1.find(s2) != std::string::npos) { // or s1.find(s2) < s1.length()
     std::cout << "found!" << '\n';
@@ -224,6 +228,13 @@ if (s1.find(s2) != std::string::npos) { // or s1.find(s2) < s1.length()
         cout << "Element 5 is in vector\n";
     }
     ```
++ get amount of element in array
+  + ```cpp
+    vi v = {1,2,1,1};
+    int n = count (v.begin(),v.end(),1);
+    cr(n)
+
+  ```
     
 
 ### Set

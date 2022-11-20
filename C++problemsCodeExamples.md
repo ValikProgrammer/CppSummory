@@ -6,6 +6,7 @@
 
 + https://codeforces.com/contest/1374/problem/C
 + https://codeforces.com/problemset/problem/1433/A
++ https://codeforces.com/problemset/problem/1703/A
 
 
 ### Жадные алгоритмы 
@@ -27,49 +28,3 @@ print(euclidus(9,6))
 
 
 
-
-#include <bits/stdc++.h>
-using namespace std;
-
-int main() {
-  int n, div = 2;
-  cout << "N = ";
-  cin >> n;
-
-  vector<int> prostyeMnojitely ;
-  while (n > 1) {
-    while (n % div == 0) {
-      n = n / div;
-      prostyeMnojitely.push_back(div);
-    }
-    div++;
-  }
-  
-  cout << n << " = 1";
-  for(auto i : prostyeMnojitely) 
-    cout << " * " << i; 
-  cout << "\n";
-
-  return 0;
-}
-
-
-
-#include <bits/stdc++.h>
-using namespace std;
-
-int main() {
-	int n = 1000000;
-	vector<int> sieve (n);
-	for (int x = 2; x*x <= n; x++) {
-		if (sieve[x]) continue;
-		for (int k = 2*x; k <= n; k += x) {
-			sieve[k] = 1;
-		}
-		
-	}
-	
-	sieve[0] = sieve[1] = 1;
-
-  return 0;
-}
