@@ -38,7 +38,8 @@
   typedef string str;
 
   int main() {
-    
+    freopen("in.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
     return 0;
   }
 
