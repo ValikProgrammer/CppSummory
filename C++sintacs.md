@@ -44,6 +44,16 @@
   typedef map<string,string> mss;
   typedef string str;
 
+  #define FAST ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+  #define um unordered_map
+  #define en '\n'
+  #define us unordered_set
+  const int INF = (int)1e9;
+
+  // bool cmpr(const vi &a,const vi &b)  { 
+  //     return (a[2] < b[2]); 
+  // } 
+
   int main() {
     
     vpi v1 = {
