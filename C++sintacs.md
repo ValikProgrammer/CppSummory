@@ -94,6 +94,16 @@ str s = "!!!Hello!world!!!";
 int n = count(s.begin(),s.end(),'!'); // can find only chars (not strings)
 cr(n)
 
+// transform all string to lower of upper case
+
+string s1 = "abcde";
+
+// using transform() function and ::toupper in STL
+transform(s1.begin(), s1.end(), s1.begin(), ::toupper);
+// using transform() function and ::tolower in STL
+transform(s2.begin(), s2.end(), s2.begin(), ::tolower);
+
+
 /*check if substr in str*/
 if (s1.find(s2) != std::string::npos) { // or s1.find(s2) < s1.length()
     std::cout << "found!" << '\n';
@@ -148,6 +158,10 @@ if (s1.find(s2) != std::string::npos) { // or s1.find(s2) < s1.length()
   + ```cpp
     vector<int> v = {0,1,2,3,4};
     int size = v.size()
+
+    vector<int> v(n); // ограничить размер 1D ветора
+    vector<vector<int>> (n, vector<int>(n)) // ограничить размер 2D вектора
+
     ```
 + Срез
   + ```cpp
@@ -357,6 +371,15 @@ cin.tie(NULL);
 
 
 ## REAL TASKS
+
++ ```
+remember how to work with lexigraphical order (just remember the way? don't think you know it)
+https://codeforces.com/group/IaBD6a6QT2/contest/472375/problem/H
+
+
+```
+
+
 + Брать наибольшее , метод двух указателей , жадые алгоритмы , поочередность
 + ```cpp
   // https://codeforces.com/problemset/problem/381/A
