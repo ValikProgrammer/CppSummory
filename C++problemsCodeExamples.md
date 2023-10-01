@@ -25,6 +25,14 @@ def euclidus(numerator, denominator):
 
 print(euclidus(9,6))
 
+## Просто интересные 
+https://codeforces.com/problemset/problem/731/A - I like that one
+https://codeforces.com/contest/1594/problem/B  - trikky
+https://codeforces.com/group/n0DBH6xFai/contest/474940/problem/F - simple, just ot know how to solve 
+https://codeforces.com/problemset/problem/702/C - two pointers, should solve by your self 
+
+https://codeforces.com/problemset/problem/279/B - an example on how to solve task with two pointers
+
 
 ## текстовые задачи
 ### квадраты с irunner
@@ -54,4 +62,6 @@ for i in range(1,n+1):
 print(res)
 
 ```
+
+
 
