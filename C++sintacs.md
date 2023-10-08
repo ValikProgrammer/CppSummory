@@ -240,6 +240,17 @@ for (auto i : arr) {
 set<int> s;
 s.insert(1);
 
+set<int> s;
+s.insert(3);
+s.insert(2);
+s.insert(5);
+cout << s.count(3) << "\n"; // 1
+cout << s.count(4) << "\n"; // 0
+s.erase(3);
+s.insert(4);
+cout << s.count(3) << "\n"; // 0
+cout << s.count(4) << "\n"; // 1
+
 ```
 
 ### MAP
@@ -264,7 +275,78 @@ for (auto i : mp) { // get keys and values
   value = i.second;
 }
 
-    return 0;
+// check if key exists
+if (m.count("aybabtu")) {
+// key exists
+}
+```
+
+### BITSET
+```cpp
+
+bitset<10> a(string("0010110110"));
+bitset<10> b(string("1011011000"));
+cout << (a&b) << "\n"; // 0010010000
+cout << (a|b) << "\n"; // 1011111110
+cout << (a^b) << "\n"; // 1001101110
+
+
+bitset<10> s(string("0010011010"));
+cout << s.count() << "\n"; // 4
+```
+
+### DEQUE
+```cpp
+deque<int> d;
+d.push_back(5); // [5]
+d.push_back(2); // [5,2]
+d.push_front(3); // [3,5,2]
+d.pop_back(); // [3,5]
+d.pop_front(); // [5]
+
+removing from the end and from the fron take just 0(1)
+
+```
+
+### STACK
+```cpp
+stack<int> s;
+s.push(3);
+s.push(2);
+s.push(5);
+cout << s.top(); // 5
+s.pop();
+cout << s.top(); // 2
+
+0(1) - adding el to top and removing 
+```
+
+### QUEUE
+```cpp
+queue<int> q;
+q.push(3);
+q.push(2);
+q.push(5);
+cout << q.front(); // 3
+q.pop();
+cout << q.front(); // 2
+
+O(1) - add element to the top and remove from the end
+
+```
+
+```
+### ITERATORS
+```cpp
+
+set<int>::iterator it = s.begin();
+auto it = s.begin();
+
+
+// print all vector in iincreasing order
+for (auto it = s.begin(); it != s.end(); it++) {
+  cout << *it << "\n";
+}
 
 ```
 

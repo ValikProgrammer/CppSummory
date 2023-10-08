@@ -46,13 +46,20 @@ typedef set<char> sc;
 #define us unordered_set
 #define FAST ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
 #define len(x) x.size()
-#define all(x) (x.begin(),x.end())
+#define all(x) x.begin(),x.end()
 
 const int INF = (int)1e9;
 const int MOD = (int)1e9+7;
 // bool cmpr(const vi &a,const vi &b)  { 
 //     return (a[2] < b[2]); 
 // } 
+
+template <typename T, typename V > void pn( pair<T,V> x) { cout << "{" << x.first << " , " << x.second << "}\n";}
+template <typename T, typename V > void ps( pair<T,V> x) { cout << "{" << x.first << " , " << x.second << "} ";}
+template <typename T> void pn( T x)  { cout  << x << "\n";}
+template <typename T> void ps( T x)  { cout  << x << " ";}
+template <typename T> void pn( T *x) {for (auto i : *x ) {ps(  i ); }cout << "\n"; }
+template <typename T> void pn2(T *x) {for (auto i : *x ) {for (auto j : i) {cout << j << " ";}cout << "\n";}}
 
 
 void solve () {

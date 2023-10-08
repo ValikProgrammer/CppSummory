@@ -32,7 +32,8 @@ https://codeforces.com/group/n0DBH6xFai/contest/474940/problem/F - simple, just 
 https://codeforces.com/problemset/problem/702/C - two pointers, should solve by your self 
 
 https://codeforces.com/problemset/problem/279/B - an example on how to solve task with two pointers
-
+https://codeforces.com/problemset/problem/1006/C - two pointers and interesting problem
+https://codeforces.com/problemset/problem/1073/C - reallly hard, two pointers try to solve, use manhetonskoe rastoyanie
 
 ## текстовые задачи
 ### квадраты с irunner

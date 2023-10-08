@@ -13,7 +13,6 @@
 ```python
   print(f"text {variable}") # print text with variable
   print(f"{variable:<10}{variable:<2}") # set the width of data (variable) (if len of data less that 10 it will set the width with ' '
-)
 ```
 ### colourful text
   + first that we need is the object(class) with colors 
