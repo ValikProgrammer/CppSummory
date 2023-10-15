@@ -35,6 +35,15 @@ https://codeforces.com/problemset/problem/279/B - an example on how to solve tas
 https://codeforces.com/problemset/problem/1006/C - two pointers and interesting problem
 https://codeforces.com/problemset/problem/1073/C - reallly hard, two pointers try to solve, use manhetonskoe rastoyanie
 
+
+# BIN SEARCH BY ANS
+https://codeforces.com/problemset/problem/1613/C - bin search+time timing
+
+
+
+
+
+
 ## текстовые задачи
 ### квадраты с irunner
 #### условие :

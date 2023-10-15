@@ -74,24 +74,57 @@ template<typename T,typename... Args> void _print(str sep, T a, Args... args) { 
 // } 
 
 void precalc() {
-    print("-> run precalc function");
+
 }
 
 void solve() {
-    // print("-> hello,world!")
+    int n = 123;
+    pii pair_int = {1,2};
+    str strings = "helloo,world!";
+    bool t = true;
+
+    mii map_int = {
+        {1,3},
+        {4,5},
+    };
+    mss map_str = {
+        {"a","b"},
+        {"c","d"},
+    };
+
+    vi vector_int = {1,2,3,5,4};
+    vpi vector_pair = {
+        {1,2},
+        {4,3},
+    };
+    
+    vector<pair<char,str>> vector_pairs_different_types = {
+        {'a',"aaaaaa"},
+        {'d',"bbbbbb"},
+    };
+
+
+    matrix vector_2d (5 , vi(5,0));
+    si set_int = {1,2,2,1,2,2,1};
+
+    
+
+    debug(n,pair_int,strings,map_int,map_str,vector_int,vector_pair,vector_pairs_different_types,vector_2d,set_int);
+    print("answer =",t,10*3);
+    print("bye...")
+    print(0);print(-1);
+
 }
 
 
 int main ( ) {
     Code By Iron_man47
-    // freopen("in.txt","r",stdin);
+    freopen("in.txt","r",stdin);
     // freopen("out.txt","w",stdout);
-    precalc();
-    int t = 1;
-    cin >> t;
 
+    int t = 1;
+    // cin >> t;
     while ( t--) {
-        print("-> run solve",t)
         solve();
     }
 
