@@ -8,6 +8,7 @@ typedef unsigned long long ull;
 typedef vector<int> vi;
 typedef vector<ll> vl;
 typedef vector<string> vs;
+typedef vector<bool> vb;
 typedef pair<int,int> pii;
 typedef pair<ll,ll> pll;
 typedef vector<pair<int,int>> vpi;
@@ -19,6 +20,7 @@ typedef set<int> si;
 typedef set<char> sc;
 // constants
 const int INF = (int)1e9;
+const int MAXN = (int)1e5+10;
 const int MOD = (int)1e9+7;
 // shortcuts
 #define X first
@@ -38,6 +40,7 @@ const int MOD = (int)1e9+7;
 // functions 
 #define iv(v,x) find(v.begin(),v.end(),x)-v.begin();
 #define riv(v,x) szv(v) - (find(v.rbegin(),v.rend(),x) -v.rbegin()) 
+#define bin(n) {str b = bitset<64>(n).to_string();b.erase(0, b.find_first_not_of('0'));cout << len(b) << "\n";}
 // #define maxE(vec) *max_element(vec.begin(),vec.end())
 // #define minE(vec) *min_element(vec.begin(),vec.end())
 // ==== INPUT AND OUTPUT
@@ -74,13 +77,14 @@ template<typename T,typename... Args> void _print(str sep, T a, Args... args) { 
 // } 
 
 void precalc() {
-    print("-> run precalc function");
+    // print("-> run precalc function");
 }
+
 
 void solve() {
-    // print("-> hello,world!")
-}
 
+
+}
 
 int main ( ) {
     Code By Iron_man47
@@ -91,7 +95,7 @@ int main ( ) {
     cin >> t;
 
     while ( t--) {
-        print("-> run solve",t)
+        // print("-> run solve",t)
         solve();
     }
 

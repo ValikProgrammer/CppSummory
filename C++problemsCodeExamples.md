@@ -25,7 +25,13 @@ def euclidus(numerator, denominator):
 
 print(euclidus(9,6))
 
+
+## EASY
+https://codeforces.com/contest/1883/problem/C -- some triccky moments, think yorself 
+
+
 ## Просто интересные 
+https://codeforces.com/contest/1884/problem/B - like bits, but not, like two pointers ,but not. Just the logic
 https://codeforces.com/problemset/problem/731/A - I like that one
 https://codeforces.com/contest/1594/problem/B  - trikky
 https://codeforces.com/group/n0DBH6xFai/contest/474940/problem/F - simple, just ot know how to solve 
@@ -35,10 +41,15 @@ https://codeforces.com/problemset/problem/279/B - an example on how to solve tas
 https://codeforces.com/problemset/problem/1006/C - two pointers and interesting problem
 https://codeforces.com/problemset/problem/1073/C - reallly hard, two pointers try to solve, use manhetonskoe rastoyanie
 
+https://codeforces.com/problemset/problem/580/B - two pointers interesting
+
 
 # BIN SEARCH BY ANS
 https://codeforces.com/problemset/problem/1613/C - bin search+time timing
 
+
+# DP
+https://codeforces.com/contest/702/problem/A - жизнь может быть проще чем дп
 
 
 
