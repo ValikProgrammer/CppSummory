@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define int long long
 // data types 
 typedef string str;
 typedef long long ll;
@@ -23,6 +22,8 @@ typedef set<char> sc;
 const int INF = (int)1e9;
 const int MAXN = (int)1e5+10;
 const int MOD = (int)1e9+7;
+const vi dx = {-1,0,1,0};
+const vi dy = {0,1,0,-1};
 // shortcuts
 #define X first
 #define Y second
@@ -73,31 +74,100 @@ template<typename T,typename... Args> void _print(str sep, T a, Args... args) { 
 #define By cin.tie(0);
 #define Iron_man47 cout.tie(0);
 
-// bool cmpr(const vi &a,const vi &b)  { 
-//     return (a[2] < b[2]); 
-// } 
 
-void precalc() {
-    // print("-> run precalc function");
+vi dx = {-1,0,1,0};
+vi dy = {0,1,0,-1};
+int bfs(vs& graph, int startX, int startY,int finishX,int finishY ) {
+    int h = len(graph), w = len(graph[0]);
+
+    matrix dist( h , vi (w,MAXN) ); // 2d vector
+    dist[startX][startY] = 0;
+
+    queue<pii> q; // q of pairs
+    q.push( {startX, startY} );
+
+    // if there is many starts, we mark they all with dist = 0 and will get correct res in the end 
+    /* for(auto&[sx sy] : vector_of_starts_of_pairs) {
+        dist[sx][sy] = 0;
+        q.push( {sx,sy} );
+    }
+    */
+
+    vector<vpi> from (h , vpi (w, {-1,-1}));// vector of pairs (restore path )
+
+    while ( !q.empty() ) {
+        auto [x,y] = q.front(); q.pop();
+        // make coordinates , check they are valid and go to next cells
+        forn(i , len(dx)) {
+            int nx = x+dx[i];
+            int ny = y+dy[i];
+            if ( nx >= 0 && ny >= 0 && nx < h && ny < w ) {
+                // valid coordinates
+                if ( graph[nx][ny] != '#' && dist[nx][ny] > dist[x][y]+1) { // if it is not wall and we was't there
+                    dist[nx][ny] = dist[x][y] +1;
+                    q.push ( { nx,ny } );
+                    from[nx][ny] = {x,y};
+                }
+            }
+        }
+    }
+
+    // get path (mark it with *)
+    if (dist[finishX][finishY] != MAXN) {
+        pii finish = {finishX,finishY};
+        while( finish.X != -1 && finish.Y != -1 ) {
+            graph[finish.X][finish.Y] = '*';
+            finish = from[finish.X][finish.Y];
+        }
+    }
+
+    // print graph 
+    for (str row : graph) {
+        print(row);
+    }
+
+    return dist[finishX][finishY];
+
+
 }
 
 
-void solve() {
+int main ( ) {
+    /*
+8 10
+..#.......
+......#.F.
+...#######
+..........
+#######.##
+.....#....
+.S.#.#....
+...#......
+    */
+    int h,w ; cin >> h >> w;
+    vs graph (h);
+    // cin >> g;
+    int startX = 0 , startY = 0;
+    int finishX = h-1, finishY = w-1;
+    forn(i,h) {
+        cin >> graph[i];
+        forn(j,w) {
+            if ( graph[i][j] == 'S' ) {
+                startX = i;
+                startY = j;
+            } else if ( graph[i][j] == 'F' ) {
+                finishX = i;
+                finishY = j;
+            }
+        }
+    }
 
-
-}
-
-signed main ( ) {
-    Code By Iron_man47
-    // freopen("in.txt","r",stdin);
-    // freopen("out.txt","w",stdout);
-    precalc();
-    int t = 1;
-    cin >> t;
-
-    while ( t--) {
-        // print("-> run solve",t)
-        solve();
+    // debug(startX,startY,finishX,finishY);
+    int distance = bfs( graph, startX,startY,finishX,finishY );
+    if (distance != MAXN) {
+        print(distance)
+    } else {
+        print("Mission Impossible")
     }
 
     return 0;
